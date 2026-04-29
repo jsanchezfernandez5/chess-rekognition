@@ -57,16 +57,3 @@ Un motor robusto capaz de procesar imágenes y gestionar múltiples conexiones s
 | :--- | :--- | :--- |
 | **Aplicación Web** | [https://chess-rekognition-app.vercel.app](https://chess-rekognition-app.vercel.app) | Vercel |
 | **Servidor API** | [https://chess-rekognition-api-production.up.railway.app](https://chess-rekognition-api-production.up.railway.app) | Railway |
-
----
-
-## Guía de Inicio Rápido (Local)
-
-1. **Clonar el proyecto**:
-   ```bash
-   git clone https://github.com/jsanchezfernandez5/chess-rekognition.git
-   ```
-2. **Configurar Backend**:
-   Instalar dependencias en `/api` vía `pip install -r requirements.txt` y ejecutar con `uvicorn main:app`.
-3. **Configurar Frontend**:
-   Instalar dependencias en `/app` vía `npm install` y ejecutar con `npm run dev`.
