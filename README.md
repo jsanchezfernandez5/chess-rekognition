@@ -24,7 +24,6 @@ El sistema se ha dividido en módulos especializados para garantizar escalabilid
 
 | Módulo | Repositorio GitHub | Descripción |
 | :--- | :--- | :--- |
-| **Página Central** | [chess-rekognition](https://github.com/jsanchezfernandez5/chess-rekognition) | Documentación maestra, actas y gestión del monorepo. |
 | **Frontend (App)** | [chess-rekognition-app](https://github.com/jsanchezfernandez5/chess-rekognition-app) | Interfaz de usuario interactiva y cliente de retransmisión. |
 | **Backend (API)** | [chess-rekognition-api](https://github.com/jsanchezfernandez5/chess-rekognition-api) | Procesamiento de imagen, lógica de ajedrez y gestión de datos. |
 
@@ -58,7 +57,6 @@ Un motor robusto capaz de procesar imágenes y gestionar múltiples conexiones s
 | :--- | :--- | :--- |
 | **Aplicación Web** | [https://chess-rekognition-app.vercel.app](https://chess-rekognition-app.vercel.app) | Vercel |
 | **Servidor API** | [https://chess-rekognition-api-production.up.railway.app](https://chess-rekognition-api-production.up.railway.app) | Railway |
-| **Documentación Técnica** | [/docs](https://chess-rekognition-api-production.up.railway.app/docs) | Swagger UI |
 
 ---
 
