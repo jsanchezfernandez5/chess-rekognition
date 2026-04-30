@@ -1,4 +1,4 @@
-# ♟️ Chess Rekognition
+# Chess Rekognition
 
 Bienvenido al repositorio central de **Chess Rekognition**, un proyecto dedicado a democratizar el ajedrez tradicional con las capacidades modernas de la **Visión Artificial**.
 
