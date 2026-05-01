@@ -2,17 +2,17 @@
 
 Bienvenido al repositorio central de **Chess Rekognition**, un proyecto dedicado a democratizar el ajedrez tradicional con las capacidades modernas de la **Visión Artificial**.
 
-> **"Capture every move, play on!"**  
-> Una solución diseñada para que los jugadores se concentren en el tablero físico mientras la tecnología se encarga del registro, análisis y difusión digital.
+> **"Capture every move!"**  
+> Una solución híbrida diseñada para que los jugadores se concentren en el tablero físico mientras la tecnología se encarga del registro, análisis y difusión digital.
 
 ---
 
 ## Propósito del Proyecto
 
-**Chess Rekognition** nace con el objetivo de eliminar las barreras entre el ajedrez físico y el digital. El sistema permite, mediante el uso de una cámara estándar, reconocer un tablero de ajedrez físico en tiempo real, digitalizar las jugadas automáticamente en formato PGN y retransmitirlas en directo a espectadores de todo el mundo.
+**Chess Rekognition** nace con el objetivo de eliminar las barreras entre el ajedrez físico y el digital. El sistema permite, mediante el uso de una cámara estándar, reconocer un tablero de ajedrez físico en tiempo real, digitalizar las jugadas automáticamente en formato PGN y retransmitirlas en directo a espectadores de todo el mundo (si se desea).
 
 Este proyecto integra múltiples disciplinas de la computación:
-*   **Visión por Computador**: Para el reconocimiento de piezas y detección de movimientos.
+*   **Visión por Computador**: Para el reconocimiento de piezas (OpenCV) y detección de movimientos (TensorFlow).
 *   **Sistemas en Tiempo Real**: Uso de WebSockets para una retransmisión sin latencia.
 *   **Análisis Inteligente**: Integración con el motor Stockfish para evaluación de partidas.
 
@@ -34,14 +34,14 @@ El sistema se ha dividido en módulos especializados para garantizar escalabilid
 ### Frontend (Aplicación React)
 Diseñado bajo una estética moderna y funcional, priorizando la experiencia del usuario (UX):
 *   **Core**: React 19, Vite, React Router Dom 7.
-*   **Estilos**: TailwindCSS 4 (Aesthetics Premium).
-*   **Iconografía**: Lucide React.
+*   **Estilos**: TailwindCSS 4.
 *   **Lógica de Ajedrez**: `chess.js` (validación de movimientos), `react-chessboard` (visualización).
+*   **Iconografía**: Lucide React.
 *   **Animaciones**: Framer Motion.
 *   **Seguridad**: Context API + JWT (JSON Web Tokens).
 
 ### Backend (API Python)
-Un motor robusto capaz de procesar imágenes y gestionar múltiples conexiones simultáneas:
+APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y la integración con la visión artificial:
 *   **Framework**: FastAPI (Alto rendimiento y WebSockets).
 *   **Visión Artificial**: OpenCV (Procesamiento de imagen) y base para TensorFlow.
 *   **Análisis**: Stockfish v17.1 (Integración nativa del motor de ajedrez).
