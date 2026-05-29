@@ -147,17 +147,9 @@ console.log(saludo);
 ```markdown
 | Columna 1 | Columna 2 | Columna 3 |
 |-----------|:---------:|----------:|
-| Izquierda | Centrado  |  Derecha  |
+| Alineación Izquierda | Alineación Centrado  |  Alineación Derecha  |
 | Dato A    | Dato B    |   Dato C  |
 ```
-
-**Alineación de columnas:**
-
-| Sintaxis | Resultado |
-|----------|-----------|
-| `\|---------|` | Izquierda (por defecto) |
-| `\|:-------:\|` | Centrado |
-| `\|--------:\|` | Derecha |
 
 ### Citas y separadores
 
