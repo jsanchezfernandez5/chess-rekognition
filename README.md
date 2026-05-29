@@ -70,6 +70,15 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 ###### H6
 ```
 
+Ejemplos:
+
+- # Encabezado H1
+- ## Encabezado H2
+- ### Encabezado H3
+- #### Encabezado H4
+- ##### Encabezado H5
+- ###### Encabezado H6
+
 ### Énfasis de texto
 
 ```markdown
@@ -79,6 +88,14 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 **_negrita y cursiva_**
 `código inline`
 ```
+
+Ejemplo:
+
+- **negrita**
+- *cursiva*
+- ~~tachado~~
+- **_negrita y cursiva_**
+- `código inline`
 
 ### Listas
 
@@ -91,6 +108,14 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 - Elemento tres
 ```
 
+Ejemplo:
+
+- Elemento uno
+- Elemento dos
+  - Sub-elemento
+  - Sub-elemento
+- Elemento tres
+
 **Ordenada:**
 ```markdown
 1. Primero
@@ -99,12 +124,25 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 3. Tercero
 ```
 
+Ejemplo:
+
+1. Primero
+2. Segundo
+   1. Sub-elemento
+3. Tercero
+
 **Checklist:**
 ```markdown
 - [x] Tarea completada
 - [ ] Tarea pendiente
 - [ ] Otra tarea
 ```
+
+Ejemplo:
+
+- [x] Tarea completada
+- [ ] Tarea pendiente
+- [ ] Otra tarea
 
 ### Links e Imágenes
 
@@ -114,16 +152,30 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 [Enlace con título](https://url.com "Título opcional")
 ```
 
+Ejemplo:
+
+- [Texto del enlace](https://url.com)
+- [Enlace con título](https://url.com "Título opcional")
+
 **Imagen:**
 ```markdown
 ![Texto alternativo](imagen.png)
 ![Alt](imagen.png "Título opcional")
 ```
 
+Ejemplo:
+
+- ![Texto alternativo](imagen.png)
+- ![Alt](imagen.png "Título opcional")
+
 **Imagen con enlace:**
 ```markdown
 [![Alt de imagen](imagen.png)](https://url.com)
 ```
+
+Ejemplo:
+
+- [![Alt de imagen](imagen.png)](https://url.com)
 
 ### Bloques de código
 
@@ -132,13 +184,26 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 Usa `npm install` para instalar.
 ```
 
+Ejemplo:
+
+- Usa `npm install` para instalar.
+
 **Bloque con resaltado de lenguaje:**
 ```markdown
 \`\`\`javascript
-const saludo = 'Hola mundo';
+const saludo = 'Hola ajedrecista';
 console.log(saludo);
 \`\`\`
 ```
+
+Ejemplo:
+
+```javascript
+javascript
+const saludo = 'Hola ajedrecista';
+console.log(saludo);
+````
+
 
 **Lenguajes soportados:** `javascript` `typescript` `python` `bash` `html` `css` `json` `sql` `yaml` `markdown` `java` `rust`
 
@@ -153,7 +218,7 @@ console.log(saludo);
 
 Ejemplo:
 
-| Columna alineado a la izquierda | Columna centrada | Columna alineada a la derecha |
+| Columna alineada a la izquierda | Columna centrada | Columna alineada a la derecha |
 |-----------|:---------:|----------:|
 | Izquierda | Centrado  | Derecha  |
 | Dato A    | Dato B    | Dato C  |
@@ -167,6 +232,12 @@ Ejemplo:
 >> Cita anidada.
 ```
 
+Ejemplo:
+
+> Esta es una cita.
+> Puede tener varias líneas.
+>> Cita anidada.
+
 **Separador horizontal:**
 ```markdown
 ---
@@ -175,6 +246,15 @@ Ejemplo:
 
 ___
 ```
+
+Ejemplo:
+
+---
+
+***
+
+___
+
 
 ---
 
@@ -187,6 +267,14 @@ ___
 </details>
 ```
 
+Ejemplo:
+
+<details>
+  <summary>Haz clic para expandir</summary>
+  Contenido oculto aquí.
+</details>
+
+
 **Notas al pie:**
 ```markdown
 Texto con nota[^1].
@@ -194,11 +282,23 @@ Texto con nota[^1].
 [^1]: Contenido de la nota al pie.
 ```
 
+Ejemplo:
+
+Texto con nota[^1].
+
+[^1]: Contenido de la nota al pie.
+
 **Escape de caracteres especiales:**
 ```markdown
 \*no es cursiva\*
 \# no es encabezado
 \[ no es enlace
 ```
+
+Ejemplo:
+
+- \*no es cursiva\*
+- \# no es encabezado
+- \[ no es enlace
 
 Caracteres escapables: `\` `` ` `` `*` `_` `{}` `[]` `()` `#` `+` `-` `.` `!` `|`
