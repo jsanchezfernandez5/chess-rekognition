@@ -151,6 +151,13 @@ console.log(saludo);
 | Dato A    | Dato B    |   Dato C  |
 ```
 
+Ejemplo:
+
+| Columna alineado a la izquierda | Columna centrada | Columna alineada a la derecha |
+|-----------|:---------:|----------:|
+| Izquierda | Centrado  | Derecha  |
+| Dato A    | Dato B    | Dato C  |
+
 ### Citas y separadores
 
 **Cita simple y anidada:**
