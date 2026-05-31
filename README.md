@@ -51,7 +51,7 @@ APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y l
 | Servicio | URL de Acceso | Plataforma |
 | :--- | :--- | :--- |
 | **Aplicación Web** | [https://chess-rekognition-app.vercel.app](https://chess-rekognition-app.vercel.app) | Vercel |
-| **Servidor API** | [https://chess-rekognition-api-production.up.railway.app](https://chess-rekognition-api-production.up.railway.app) | Railway |
+| **Servidor API y BBDD** | [https://chess-rekognition-api-production.up.railway.app](https://chess-rekognition-api-production.up.railway.app) | Railway |
 
 ## Sobre Markdown - Pequeña guía
 
