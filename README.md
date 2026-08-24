@@ -13,6 +13,8 @@ Bienvenido al repositorio central de **Chess Rekognition**, un proyecto dedicado
 
 El sistema se compone de un backend Python con FastAPI, OpenCV y TensorFlow, y un frontend con React, Vite y Tailwind CSS, comunicados en tiempo real mediante WebSockets. El procesamiento de imagen se realiza íntegramente en el servidor, lo que permite delegar la carga computacional del reconocimiento visual fuera del navegador y garantizar la compatibilidad con cualquier dispositivo cliente.
 
+Como evolución del producto, el reconocimiento funciona con un sistema **dual de motores**: MobileNetV2 (clasificación casilla a casilla) como motor por defecto, y YOLO26 (detección de objetos con bounding boxes de piezas y manos) como segundo motor en paralelo. Un mecanismo de **fusión por arbitraje de confianza** decide casilla a casilla qué lectura gana, con criterio medible de promoción basado en métricas sobre validación (nunca preferencias). La retransmisión admite además el relay opcional de vídeo en directo al espectador por el mismo WebSocket.
+
 La metodología sigue un enfoque ágil iterativo alineado con las entregas parciales del grado: computación del ajedrez, detección del tablero, entrenamiento del modelo/patrón de las piezas de ajedrez, integración del backend y validación con usuarios reales de clubes de ajedrez.
 
 El resultado esperado es un sistema funcional capaz de reconocer automáticamente las piezas, generar la notación PGN (Portable Game Notation) de la partida y retransmitirla en directo por URL pública. Todo ello, desde el enfoque democratizador de código abierto eliminando la dependencia de hardware.
@@ -41,6 +43,7 @@ Diseñado bajo una estética moderna y funcional, priorizando la experiencia del
 APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y la integración con la visión artificial:
 *   **Framework**: FastAPI (Alto rendimiento y WebSockets).
 *   **Visión Artificial**: OpenCV (Procesamiento de imagen) y base para TensorFlow.
+*   **Reconocimiento ML**: MobileNetV2 (TensorFlow, clasificación por casilla) + YOLO26 (Ultralytics, detección de objetos y manos) con fusión por arbitraje.
 *   **Análisis**: Stockfish v17.1 (Integración nativa del motor de ajedrez).
 *   **Base de Datos**: MySQL gestionado mediante SQLAlchemy ORM.
 *   **Email**: Resend SDK para correos transaccionales.
