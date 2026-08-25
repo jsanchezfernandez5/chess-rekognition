@@ -11,9 +11,9 @@ Bienvenido al repositorio central de **Chess Rekognition**, un proyecto dedicado
 
 **Chess Rekognition** es un **sistema híbrido de reconocimiento visual de jugadas en partidas presenciales de ajedrez**, orientado a su retransmisión en tiempo real sin necesidad de hardware especializado. Los tableros electrónicos existentes (DGT e-Board, ChessNut) tienen un coste unitario de entre 500 € y 800 €, lo que los hace inaccesibles para la mayoría de clubes amateurs y escuelas. Chess Rekognition resuelve este problema utilizando únicamente una cámara convencional sin pagos ni subscripciones.
 
-El sistema se compone de un backend Python con FastAPI, OpenCV y TensorFlow, y un frontend con React, Vite y Tailwind CSS, comunicados en tiempo real mediante WebSockets. El procesamiento de imagen se realiza íntegramente en el servidor, lo que permite delegar la carga computacional del reconocimiento visual fuera del navegador y garantizar la compatibilidad con cualquier dispositivo cliente.
+El sistema se compone de un backend Python con FastAPI, OpenCV y YOLO26 (Ultralytics), y un frontend con React, Vite y Tailwind CSS, comunicados en tiempo real mediante WebSockets. El procesamiento de imagen se realiza íntegramente en el servidor, lo que permite delegar la carga computacional del reconocimiento visual fuera del navegador y garantizar la compatibilidad con cualquier dispositivo cliente.
 
-Como evolución del producto, el reconocimiento funciona con un sistema **dual de motores**: MobileNetV2 (clasificación casilla a casilla) como motor por defecto, y YOLO26 (detección de objetos con bounding boxes de piezas y manos) como segundo motor en paralelo. Un mecanismo de **fusión por arbitraje de confianza** decide casilla a casilla qué lectura gana, con criterio medible de promoción basado en métricas sobre validación (nunca preferencias). La retransmisión admite además el relay opcional de vídeo en directo al espectador por el mismo WebSocket.
+El reconocimiento visual funciona con **YOLO26 como único motor**: detección de objetos con bounding boxes de piezas y manos sobre el tablero rectificado. La retransmisión admite además el relay opcional de vídeo en directo al espectador por el mismo WebSocket.
 
 La metodología sigue un enfoque ágil iterativo alineado con las entregas parciales del grado: computación del ajedrez, detección del tablero, entrenamiento del modelo/patrón de las piezas de ajedrez, integración del backend y validación con usuarios reales de clubes de ajedrez.
 
@@ -42,8 +42,8 @@ Diseñado bajo una estética moderna y funcional, priorizando la experiencia del
 ### Backend (API Python)
 APIRest en FastAPI de python para el procesamiento de la lógica del ajedrez y la integración con la visión artificial:
 *   **Framework**: FastAPI (Alto rendimiento y WebSockets).
-*   **Visión Artificial**: OpenCV (Procesamiento de imagen) y base para TensorFlow.
-*   **Reconocimiento ML**: MobileNetV2 (TensorFlow, clasificación por casilla) + YOLO26 (Ultralytics, detección de objetos y manos) con fusión por arbitraje.
+*   **Visión Artificial**: OpenCV (Procesamiento de imagen) y base para detección.
+*   **Reconocimiento ML**: YOLO26 (Ultralytics, detección de objetos: piezas y manos sobre el tablero rectificado).
 *   **Análisis**: Stockfish v17.1 (Integración nativa del motor de ajedrez).
 *   **Base de Datos**: MySQL gestionado mediante SQLAlchemy ORM.
 *   **Email**: Resend SDK para correos transaccionales.
